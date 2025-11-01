@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { CocktailCategory, PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -10,6 +10,7 @@ async function main() {
         "Klasyczny kubański koktajl o orzeźwiającym, miętowo-limonkowym smaku.",
       manual:
         "1. W wysokiej szklance delikatnie ugnieć liście mięty z cukrem i sokiem z limonki. 2. Dodaj kruszony lód. 3. Wlej rum. 4. Uzupełnij wodą gazowaną i delikatnie wymieszaj. 5. Udekoruj gałązką mięty i plasterkiem limonki.",
+      category: CocktailCategory.REFRESHING,
       ingredients: {
         create: [
           {
@@ -94,6 +95,7 @@ async function main() {
         "Popularny włoski aperitif o charakterystycznym pomarańczowym kolorze i lekko gorzkim smaku.",
       manual:
         "1. Do dużego kieliszka do wina wrzuć kostki lodu. 2. Wlej Prosecco. 3. Wlej Aperol. 4. Dodaj odrobinę wody gazowanej. 5. Delikatnie wymieszaj i udekoruj plasterkiem pomarańczy.",
+      category: CocktailCategory.BITTER,
       ingredients: {
         create: [
           {
@@ -164,6 +166,7 @@ async function main() {
         'Elegancki, różowy koktajl znany z serialu "Seks w wielkim mieście".',
       manual:
         "1. Schłodź kieliszek koktajlowy. 2. Do shakera wypełnionego lodem wlej wódkę cytrynową, Cointreau, sok żurawinowy i sok z limonki. 3. Energicznie wstrząsaj przez ok. 15 sekund. 4. Przelej do schłodzonego kieliszka przez sitko. 5. Udekoruj skórką pomarańczy.",
+      category: CocktailCategory.STRONG,
       ingredients: {
         create: [
           {
@@ -217,7 +220,7 @@ async function main() {
                   name: "Sok z limonki",
                   description: "Sok z limonki",
                   isAlcohol: false,
-                  imageUrl: "placeholder.jpg",
+                  imageUrl: "placeholder.jng",
                 },
               },
             },

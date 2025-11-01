@@ -13,14 +13,25 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum CocktailCategory {
+  BITTER
+  SWEET
+  SOUR
+  REFRESHING
+  STRONG 
+  OTHER
+}
+
 model Cocktail {
   id                    Int          @id @default(autoincrement())
   name                  String       @unique
   description           String
   manual                String
+  category              CocktailCategory
   ingredients           IngredientsOnCocktails[]
   createdAt             DateTime     @default(now())
   updatedAt             DateTime     @updatedAt
+
 }
 
 model Ingredient {
