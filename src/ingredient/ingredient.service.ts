@@ -51,7 +51,14 @@ export class IngredientService {
   }
 
   async findOne(id: number) {
-    return await this.database.ingredient.findUnique({ where: { id } });
+    const ingredient = await this.database.ingredient.findUnique({
+      where: { id },
+    });
+
+    if (ingredient != null) {
+      return ingredient;
+    }
+    throw new NotFoundException("Ingredient with this id does not exist!");
   }
 
   async update(id: number, updateIngredientDto: UpdateIngredientDto) {
