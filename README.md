@@ -29,3 +29,5 @@ REST API do zarządzania przepisami na koktajle i ich składnikami. Projekt zost
 - `GET /cocktail/:id` - Pobieranie szczegółów jednego koktajlu.
 - `PATCH /cocktail/:id` - Aktualizacja koktajlu (w tym jego składników).
 - `DELETE /cocktail/:id` - Usuwanie koktajlu.
+
+Zostawiam również link do [projektu z wakacyjnego wyzwania](https://github.com/Liseu1/kanarownik-solvro-backend).
